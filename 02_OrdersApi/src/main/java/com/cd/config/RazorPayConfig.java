@@ -1,9 +1,13 @@
 package com.cd.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import lombok.Value;
+import com.razorpay.RazorpayClient;
+import com.razorpay.RazorpayException;
+
+
 
 @Configuration
 public class RazorPayConfig {
@@ -11,7 +15,7 @@ public class RazorPayConfig {
 	@Value("${razorpay.key.id}")
     private String keyId;
 
-    @Value("${razorpay.key.secret}")
+	@Value("${razorpay.key.secret}")
     private String keySecret;
 
     @Bean
