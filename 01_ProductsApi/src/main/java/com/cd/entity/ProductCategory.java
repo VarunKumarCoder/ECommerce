@@ -8,9 +8,7 @@ import lombok.*;
 import java.io.Serializable;
 import java.util.Set;
 
-/**
- * Represents a product category in the E-Commerce system.
- */
+
 @Entity
 @Table(name = "product_category")
 @Data
