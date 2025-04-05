@@ -12,4 +12,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
 	public Order findByRazorPayOrderId(String razorPayOrderId);
 	public List<Order> findByEmail(String email);
+	public void save(com.razorpay.Order order);
 }

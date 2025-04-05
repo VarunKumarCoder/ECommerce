@@ -10,5 +10,7 @@ import com.cd.entity.Customer;
 public interface CustomerRepository extends JpaRepository<CustomerDTO, Long>{
 
 	public Customer findByEmail(String Email);
+
+	public void save(Customer customer);
 	
 }
