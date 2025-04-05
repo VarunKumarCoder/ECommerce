@@ -31,7 +31,6 @@ public class MyDataRestConfig implements RepositoryRestConfigurer{
     }
 
 	private void exposeIds(RepositoryRestConfiguration config) {
-		// TODO Auto-generated method stub
 		Set<EntityType<?>> entities=entityManager.getMetamodel().getEntities();
 		List<Class> entityClasses=new ArrayList<>();
 		for(EntityType tempEntityType : entities) {
