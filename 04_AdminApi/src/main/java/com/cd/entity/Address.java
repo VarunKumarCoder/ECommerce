@@ -8,7 +8,6 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table
 @Data	
 public class Address {
 
