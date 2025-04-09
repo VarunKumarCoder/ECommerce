@@ -1,6 +1,8 @@
 package com.cd.config;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.amazonaws.auth.AWSCredentials;
@@ -21,6 +23,7 @@ public class S3Config {
 	@Value("${aws.region}")
 	private String region;
 	
+	@Bean
 	public AmazonS3 s3() {
 		AWSCredentials awsCredentials =new BasicAWSCredentials(accessKey, secret);
 		
@@ -29,4 +32,9 @@ public class S3Config {
 				.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
 				.build();
 	}
+	
+	@Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
 }
