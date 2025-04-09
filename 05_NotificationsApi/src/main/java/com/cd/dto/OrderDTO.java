@@ -3,6 +3,7 @@ package com.cd.dto;
 import java.util.List;
 
 import com.cd.entity.Address;
+import com.cd.entity.Customer;
 import com.cd.entity.OrderItem;
 
 import jakarta.persistence.ElementCollection;

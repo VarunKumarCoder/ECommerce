@@ -9,7 +9,7 @@ import jakarta.persistence.Column;
 import lombok.Data;
 
 @Data
-public class Customer {
+public class CustomerDTO {
 
 	private String name;
 	private String email;
